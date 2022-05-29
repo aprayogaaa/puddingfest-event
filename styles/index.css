@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.clear {
+  clear: both;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.container nav .burger {
+  cursor: pointer;
+}
+
+.container nav {
+  position: absolute;
+  top: 0;
+  padding: 25px 35px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  z-index: 2;
+}
+
+.container nav h3 span {
+  color: #9ACEFF;
+}
+
+.container nav > div {
+  position: fixed;
+  top: 0;
+  right: -9999px;
+  bottom: 0;
+  background-color: #053196;
+  padding-right: 30px;
+  padding-left: 10px;
+  padding-top: 30px;
+  width: 250px;
+  transition: 300ms;
+}
+
+.container nav .close-icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.sidebar-active {
+  right: 0 !important;
+}
+
+.container nav div a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px;
+  outline: 0;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.container nav div a:last-child {
+  background-color: #9ACEFF;
+  font-weight: 700;
+  color: #000;
+  padding: 6px 14px;
+  width: fit-content;
+}
+
+.container .container-left {
+  flex: 1;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px 0;
+  background-image: url('./../images/landing.png');
+  background-position: center;
+  z-index: 1;
+}
+
+.container .container-left:after {
+  content: '';
+  background: rgba(0, 0, 0, .5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.container .container-left .text-bottom {
+  padding: 0 35px;
+}
+
+.container .container-left .text-bottom h3 {
+  margin-bottom: 8px;
+}
+
+.container .container-left .text-bottom h3 span {
+  color: #9ACEFF;
+}
+
+.container .container-left .text-bottom p {
+  font-size: 14px;
+}
+
+.container .text {
+  position: absolute;
+  top: 150px;
+  left: 35px;
+  color: #fff;
+  z-index: 1;
+}
+
+.container .text p {
+  position: absolute;
+  left: 0;
+  color: #B5BBBD;
+  font-size: 80px;
+}
+
+.container .text h1 {
+  font-size: 50px;
+}
+
+.container .container-right {
+  flex: 3;
+  background-image: url('./../images/landing.png');
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+.event1 {
+  width: 100%;
+  min-height: calc(100vh + 250px);
+  background: linear-gradient(116.82deg, rgba(0, 0, 0, 0.2) 0%, rgba(154, 206, 255, 0.2) 100%), #053196;
+  padding: 60px 40px;
+}
+
+.event2 {
+  width: 100%;
+  min-height: calc(100vh + 250px);
+  background: linear-gradient(116.82deg, rgba(0, 0, 0, 0.2) 0%, rgba(154, 206, 255, 0.2) 100%), #FFFFFF;
+  padding: 60px 40px;
+}
+
+.rock1, .rock2, .rock3 {
+  display: none;
+}
+
+.event1 .event-header {
+  color: #fff;
+}
+
+.event1 .event-header h1,
+.event2 .event-header h1 {
+  color: #A7CAD6;
+  font-size: 25px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.event2 .event-header h1 {
+  color: #A0674B;
+  font-weight: 600;
+}
+
+.event1 .event-body,
+.event2 .event-body {
+  display: flex;
+  margin-top: 70px;
+  gap: 60px;
+  flex-direction: column;
+}
+
+.event2 .event-body {
+  gap: 100px;
+}
+
+.event1 .event-body .event-body-left {
+  flex: 2;
+  color: #fff;
+}
+
+.event2 .event-body .event-body-left {
+  flex: 1;
+  z-index: 1;
+}
+
+.event1 .event-body .event-body-left .event-body-left-top h1 {
+  color: #9ACEFF;
+  font-size: 40px;
+}
+
+.event1 .event-body .event-body-left .event-body-left-top p {
+   margin-top: 12px;
+}
+
+.event1 .event-body .event-body-left .event-body-left-bottom {
+  margin-top: 40px;
+}
+
+.event1 .event-body .event-body-left .event-body-left-bottom h3 {
+  font-weight: normal;
+  font-size: 23px;
+  margin-bottom: 16px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.benefit-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #A7CAD6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.many-more {
+  font-size: 13px;
+  margin-left: 53px;
+}
+
+.event1 .event-body .event-body-right {
+  flex: 1;
+  z-index: 1;
+}
+
+.event2 .event-body .event-body-right {
+  flex: 2;
+}
+
+.event2 .event-body .event-body-right .event-body-right-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.event2 .event-body .event-body-right h1 {
+  color: #053196;
+  font-size: 50px;
+}
+
+.event2 .event-body .event-body-right .event-body-right-top {
+  margin-bottom: 40px;
+}
+
+.event2 .event-body .event-body-right .event-body-right-top h2 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.event2 .event-body .event-body-right .event-body-right-bottom > p:first-child {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.carousel-content {
+  background: #fff;
+  width: 100%;
+  height: 350px;
+  border-radius: 7px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  display: none;
+}
+
+.carousel-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.carousel-dot div {
+  background: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.timeline {
+  width: 100%;
+  min-height: 50vh;
+  background: linear-gradient(116.82deg, rgba(0, 0, 0, 0.2) 0%, rgba(154, 206, 255, 0.2) 100%), #053196;
+  color: #fff;
+  padding: 60px 25px 70px 25px;
+}
+
+.timeline h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.timeline-content {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  position: relative;
+}
+
+.timeline-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timeline-info > div:first-child div:nth-child(2) {
+  margin-top: 100px;
+}
+
+.timeline-info > div:first-child div:nth-child(3) {
+  margin-top: 180px;
+}
+
+.timeline-info > div:last-child div:nth-child(1) {
+  margin-top: 50px;
+}
+
+.timeline-info > div:last-child div:nth-child(2) {
+  margin-top: 120px;
+}
+
+.timeline-content .single-timeline {
+  display: flex;
+  align-items: center;
+}
+
+.timeline-content .single-timeline-start {
+  justify-content: flex-end;
+}
+
+.timeline-content .single-timeline-start h3 {
+  text-align: right;
+}
+
+.timeline-content .single-timeline-end {
+  justify-content: flex-start;
+  margin-left: 90px;
+}
+
+.timeline-content .single-timeline .single-timeline-text h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.timeline-content .single-timeline .single-timeline-text p.right {
+  text-align: right;
+}
+
+.timeline-content .single-timeline .single-timeline-text p.left {
+  text-align: left;
+}
+
+.timeline-graph {
+  position: absolute;
+  top: 0;
+  left: 53%;
+  transform: translateX(-53%);
+}
+
+.timeline-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #A7CAD6;
+  border-radius: 50%;
+  margin-bottom: 100px;
+}
+
+.timeline-circle:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content .line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #A7CAD6;
+}
+
+.register {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(116.82deg, rgba(0, 0, 0, 0.2) 0%, rgba(154, 206, 255, 0.2) 100%), #FFFFFF;
+  padding: 60px 40px 40px 40px;
+}
+
+.register h1 {
+  color: #053196;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.register-content {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+}
+
+.register-content div {
+  margin-bottom: 35px;
+}
+
+.register input,
+.register select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  margin-top: 17px;
+}
+
+.register button {
+  background-color: #053196;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  width: 130px;
+  height: 43px;
+  font-size: 18px;
+  float: right;
+  cursor: pointer;
+}
+
+.contact {
+  width: 100%;
+  min-height: 50vh;
+  background: linear-gradient(116.82deg, rgba(0, 0, 0, 0.2) 0%, rgba(154, 206, 255, 0.2) 100%), #053196;
+  color: #fff;
+  padding: 60px 25px 40px 25px;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.contact .contact-content {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+}
+
+.contact .contact-content > p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content h2 {
+  font-size: 60px;
+  color: #9ACEFF;
+  margin-bottom: 60px;
+}
+
+.contact .contact-content .contact-info {
+  color: #A7CAD6;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact .contact-content .benefit {
+  margin-bottom: 50px;
+  gap: 10px;
+}
+
+.contact .contact-content .benefit .benefit-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.active {
+  background-color: gray !important;
+}
+
+.error-msg {
+  margin-top: 3px;
+  color: red;
+  font-size: 13px;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 500px) {
+  .timeline-info > div:first-child div:nth-child(2) {
+    margin-top: 100px !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .timeline-info > div:first-child div:nth-child(2) {
+    margin-top: 170px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    height: calc(100vh + 100px);
+  }
+
+  .container nav {
+    background-color: #053196;
+    padding: 16px 35px;
+  }
+
+  .container nav > div {
+    position: static;
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    background: transparent;
+  }
+
+  .container nav .close-icon,
+  .container nav .burger {
+    display: none;
+  }
+
+  .container .text {
+    top: 100px;
+  }
+
+  .container .text p {
+    left: auto;
+    right: 0;
+  }
+  
+  .container .text h1 {
+    font-size: 90px;
+  }
+
+  .container nav div a {
+    margin-bottom: 0;
+    display: unset;
+  }
+
+  .container .container-left {
+    background: #03040B;
+  }
+
+  .container .container-left:after {
+    all: unset;
+  }
+
+  .container .container-right {
+    display: block;
+  }
+
+  .event1,
+  .event2,
+  .register,
+  .contact {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .event1 .event-header {
+    margin: 0 200px;
+  }
+
+  .event1 .event-header h1 {
+    font-size: 55px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .event2 .event-header h1 {
+    font-size: 45px;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .event1 .event-body,
+  .event2 .event-body {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .event1 .event-body .event-body-left .event-body-left-top h1 {
+    font-size: 75px;
+  }
+
+  .event2 .event-body .event-body-right h1 {
+    font-size: 70px;
+  }
+
+  .event2 .event-body .event-body-right .offset-text {
+    margin-left: 90px;
+  }
+
+  .event1 .rock1,
+  .event2 .rock1,
+  .register .rock1,
+  .contact .rock1,
+  .timeline .rock1 {
+    position: absolute;
+    top: 25%;
+    left: 4%;
+    display: block;
+  }
+
+  .event2 .rock1,
+  .register .rock1 {
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    left: -4%;
+  }
+  
+  .event1 .rock2,
+  .event2 .rock2,
+  .register .rock2,
+  .contact .rock2,
+  .contact .rock3,
+  .timeline .rock2,
+  .timeline .rock3 {
+    position: absolute;
+    top: 30%;
+    right: -3%;
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+
+  .event2 .rock2,
+  .register .rock2 {
+    width: auto;
+    height: auto;
+    top: 12%;
+    right: 12%;
+  }
+
+  .contact .rock1,
+  .timeline .rock1 {
+    top: 50%;
+    left: 12%;
+  }
+
+  .contact .rock2,
+  .timeline .rock2 {
+    top: 10%;
+    right: 12%;
+  }
+
+  .contact .rock3,
+  .timeline .rock3 {
+    right: 8%;
+    top: 80%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .contact h1,
+  .timeline h1 {
+    font-size: 60px;
+  }
+
+  .contact .contact-content h2 {
+    font-size: 70px;
+  }
+
+  .contact .contact-content .benefit {
+    gap: 30px;
+  }
+
+  .timeline {
+    padding: 60px 0 80px 0;
+    position: relative;
+  }
+
+  .timeline h1 {
+    font-size: 60px;
+  }
+
+  .timeline-info > div:first-child div:nth-child(2) {
+    margin-top: 150px;
+  }
+
+  .timeline-content .single-timeline-end {
+    margin-left: 0;
+  }
+
+  .timeline-content .single-timeline .single-timeline-text h3 {
+    font-size: 25px;
+  }
+}
